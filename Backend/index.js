@@ -18,7 +18,7 @@ app.use(express.json())
 
 app.use(cors())
 const env = process.env.MONGO_URL
-mongoose.connect(env, ,{
+mongoose.connect(env,{
             //must add in order to not get any error masseges:
             useUnifiedTopology:true,
             useNewUrlParser: true,
