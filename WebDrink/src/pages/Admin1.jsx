@@ -19,13 +19,13 @@ const Admin1 = () => {
         <div class="flex h-screen">
             <div class="w-64 bg-green-200 border-spacing-1 border-gray-300 rounded-r-2xl">
              
-              <div class="p-4 ml-2 flex items-center border-b border-green-200">
+              <div class="p-4 ml-2 flex items-center border-b border-green-200 ">
                 <img 
                   src={Logo} 
                   alt="Logo" 
-                  class="w-10 h-10 rounded-full"
+                  class="w-10 h-10 rounded-full cursor-pointer"
                 />
-                <span class="ml-2 font-bold text-green-600 font-serif">Admin</span>
+                <span class="ml-2 font-bold text-green-600 font-serif cursor-pointer">Admin</span>
               </div>
               
               <ul class="px-4 py-8 h-full space-y-2 text-gray-700 font-serif bg-green-100">

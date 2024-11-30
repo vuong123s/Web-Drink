@@ -18,7 +18,7 @@ const Login = ({isPopupActive}) => {
 
         {/* Login Form */}
         <div className={` w-full p-10 ${isActive ? "transform translate-x-[-400px]" : "transform translate-x-0"} transition-all duration-500 ease-in-out`}>
-          <h2 className="text-3xl text-center text-white">Đăng nhập</h2>
+          <h2 className="text-3xl text-center text-white">Login</h2>
           <form action="#">
             <div className="relative w-full h-12 border-b-2 border-[#162938] my-8">
               <input
@@ -37,7 +37,7 @@ const Login = ({isPopupActive}) => {
                 required
                 className="w-full h-full bg-transparent border-none outline-none text-white font-semibold pl-8"
               />
-              <label className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white font-medium transition-all duration-500">Mật khẩu</label>
+              <label className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white font-medium transition-all duration-500">Password</label>
               <span className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-xl">
                 <ion-icon name="lock-closed"></ion-icon>
               </span>
@@ -45,21 +45,21 @@ const Login = ({isPopupActive}) => {
             <div className=" text-white flex justify-between mb-4">
               <label>
                 <input type="checkbox" className="mr-2 accent-[#162938]" />
-                Ghi nhớ tôi
+                Remember
               </label>
-              <a href="#" className="hover:underline">Quên Mật khẩu?</a>
+              <a href="#" className="hover:underline">Forgot password?</a>
             </div>
             <button
               type="submit"
               className="w-full h-12 bg-[#162938] rounded-lg text-white font-medium text-lg"
             >
-              Đăng nhập
+              Login
             </button>
             <div className="login-register text-white text-center mt-5">
               <p>
-                Bạn chưa có tài khoản?{" "}
+              You do not have an account?{" "}
                 <a href="#" className="text-lg font-semibold hover:underline" onClick={() => setIsActive(true)}>
-                  Đăng ký
+                Register
                 </a>
               </p>
             </div>
@@ -68,7 +68,7 @@ const Login = ({isPopupActive}) => {
 
         {/* Register Form */}
         <div className={`form-box register absolute w-full p-10 ${isActive ? "transform translate-x-0" : "transform translate-x-[400px]"} transition-all duration-500 ease-in-out`}>
-          <h2 className="text-3xl text-center text-white">Đăng ký</h2>
+          <h2 className="text-3xl text-center text-white">Register</h2>
           <form action="#">
             <div className="input-box relative w-full h-12 border-b-2 border-[#162938] my-8">
               <input
@@ -76,7 +76,7 @@ const Login = ({isPopupActive}) => {
                 required
                 className="w-full h-full bg-transparent border-none outline-none text-white font-semibold pl-8"
               />
-              <label className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white font-medium transition-all duration-500">Tên người dùng</label>
+              <label className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white font-medium transition-all duration-500">User name</label>
               <span className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-xl">
                 <ion-icon name="person"></ion-icon>
               </span>
@@ -98,7 +98,7 @@ const Login = ({isPopupActive}) => {
                 required
                 className="w-full h-full bg-transparent border-none outline-none text-white font-semibold pl-8"
               />
-              <label className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white font-medium transition-all duration-500">Mật khẩu</label>
+              <label className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white font-medium transition-all duration-500">Password</label>
               <span className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-xl">
                 <ion-icon name="lock-closed"></ion-icon>
               </span>
@@ -106,20 +106,20 @@ const Login = ({isPopupActive}) => {
             <div className="remember-forgot text-white mb-6">
               <label>
                 <input type="checkbox" className="mr-2 accent-[#162938]" />
-                Tôi đồng ý với các điều khoản & điều kiện
+                I agree to the terms & conditions
               </label>
             </div>
             <button
               type="submit"
               className="w-full h-12 bg-[#162938] rounded-lg text-white font-medium text-lg"
             >
-              Đăng ký
+              Register
             </button>
             <div className="login-register text-white text-center mt-5">
               <p>
-                Bạn đã có tài khoản?{" "}
+              You already have an account?{" "}
                 <a href="#" className="text-lg font-semibold hover:underline" onClick={() => setIsActive(false)}>
-                  Đăng nhập
+                  Login
                 </a>
               </p>
             </div>

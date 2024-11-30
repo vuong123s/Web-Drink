@@ -51,7 +51,7 @@ const CartPage = () => {
                 </div>
             </Link>
             
-            <ul class="nav flex items-center space-x-8 text-gray-700 font-medium">
+            <ul class="nav flex items-center space-x-8 mr-20 text-gray-700 font-medium">
                 <li>
                     <a href="#" class="hover:text-gray-900 flex items-center space-x-1">
                         <span>Discovery</span>
@@ -77,7 +77,7 @@ const CartPage = () => {
         <div class="content flex flex-col items-center py-32">
 
             <h1 class="text-3xl text-gray-800 pb-6">Your cart items</h1>
-            <a href="#" class="text-green-600 hover:underline pb-8">Back to shopping</a>
+            <a href="/" class="text-green-600 hover:underline pb-8">Back to shopping</a>
 
             <div class="product-list w-3/4 overflow-hidden">
                 <table class="w-full text-left">

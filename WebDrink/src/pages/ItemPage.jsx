@@ -18,7 +18,7 @@ const ItemPage = ({active}) => {
               <p>Price: $ {dataItem.price}</p>
             </div>
             <div className="mb-4 flexCenter">
-              <p className="font-medium mr-5">Số lượng</p>
+              <p className="font-medium mr-5">Quantity</p>
               <input
                 type="number"
                 min="0"
@@ -29,7 +29,7 @@ const ItemPage = ({active}) => {
             <div className="flex justify-center mt-6">
               <button onClick={() => addToCart(dataItem.id)} className="flex items-center bg-green-600 text-white py-3 px-6 rounded-lg shadow-lg transition-all hover:bg-green-700 hover:scale-105">
                 <LuShoppingCart  className="w-5 h-5 mr-2" />
-                <p>+ Thêm vào giỏ hàng</p>
+                <p>+ Add to cart</p>
               </button>
             </div>
             <div className='mt-10 text-left'>
