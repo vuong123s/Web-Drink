@@ -17,7 +17,7 @@ dotenv.config();
 app.use(express.json())
 
 app.use(cors())
-const env = process.env.MONGO_URL.toString()
+const env = process.env.MONGO_URL
 mongoose.connect(env)
 
 const storage = multer.diskStorage({
