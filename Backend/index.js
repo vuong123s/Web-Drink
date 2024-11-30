@@ -16,7 +16,7 @@ app.use(express.json())
 
 app.use(cors())
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL.toString())
 
 const storage = multer.diskStorage({
     destination: './upload/images/products',
