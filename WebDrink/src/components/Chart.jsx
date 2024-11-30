@@ -32,7 +32,7 @@ import { useEffect, useState } from "react";
     
       useEffect(() => {
         fetchInfo()
-        
+        getTotalCartAmount()
       }, [])
 
       const getTotalCartAmount = () => {
@@ -54,7 +54,7 @@ import { useEffect, useState } from "react";
         }
       }
 
-      getTotalCartAmount()
+      
 
       const chartConfig = {
         type: "bar",
