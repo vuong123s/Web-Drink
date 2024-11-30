@@ -9,7 +9,9 @@ const path = require("path")
 const cors = require("cors")
 const { type } = require("os")
 const { error } = require("console")
-require('dotenv').config();
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 
 app.use(express.json())
