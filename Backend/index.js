@@ -265,7 +265,6 @@ const Order = mongoose.model('Order', {
   },
   email:{
     type: String,
-    unique: true
   },
   SDT:{
     type: String,
