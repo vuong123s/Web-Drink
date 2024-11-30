@@ -11,35 +11,20 @@ import { useEffect, useState } from "react";
 
    
   export default function Example() {
-
-    
-
       const [allorder, setOrder] = useState([])
-      const [allproducts, setAllproducts] = useState([])
-      const [data, setData] = useState({
-        total: [],
-        date: []
-      })
       const fetchInfo = async () => {
         await fetch('http://localhost:3000/allorder')
         .then((res) => res.json())
         .then((data) => {setOrder(data)})
-    
-        await fetch('http://localhost:3000/allproduct')
-        .then((res) => res.json())
-        .then((data) => {setAllproducts(data)})
       }
-    
       useEffect(() => {
         fetchInfo()
-        getTotalCartAmount()
       }, [])
 
       const getTotalCartAmount = () => {
-        let total;
+        let data = { total : [], date: []}
         for(let i of allorder){
-          console.log(i.date.substring(5,10))
-          console.log(i.total)
+          console.log(i)
           let x = -1
           for(let j in data.date){
             if(i.date.substring(5,10) == data.date[j]){
@@ -52,6 +37,7 @@ import { useEffect, useState } from "react";
             data.total.push(i.total)
           }
         }
+        return data
       }
 
       
@@ -62,7 +48,7 @@ import { useEffect, useState } from "react";
         series: [
           {
             name: "Sales",
-            data: data.total,
+            data: getTotalCartAmount().total,
           },
         ],
         options: {
@@ -99,7 +85,7 @@ import { useEffect, useState } from "react";
                 fontWeight: 400,
               },
             },
-            categories: data.date,
+            categories: getTotalCartAmount().date,
           },
           yaxis: {
             labels: {
