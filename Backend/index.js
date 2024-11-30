@@ -15,8 +15,8 @@ require('dotenv').config();
 app.use(express.json())
 
 app.use(cors())
-
-mongoose.connect(process.env.MONGO_URL.toString())
+const env = process.env.MONGO_URL.toString()
+mongoose.connect(env)
 
 const storage = multer.diskStorage({
     destination: './upload/images/products',
