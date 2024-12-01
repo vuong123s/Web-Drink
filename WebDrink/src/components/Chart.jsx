@@ -22,23 +22,26 @@ import { useEffect, useState } from "react";
       }, [])
 
       const getTotalCartAmount = () => {
-        let data = { total : [], date: []}
-        for(let i of allorder){
-          console.log(i)
-          let x = -1
-          for(let j in data.date){
-            if(i.date.substring(5,10) == data.date[j]){
-              data.total[j] += i.total
-              x = 1
+        let data = { total: [], date: [] };
+        
+        for (let i of allorder) {
+          if (i.date && typeof i.date === "string") { 
+            let x = -1;
+            for (let j in data.date) {
+              if (i.date.substring(5, 10) === data.date[j]) {
+                data.total[j] += i.total || 0; 
+                x = 1;
+              }
+            }
+            if (x === -1) {
+              data.date.push(i.date.substring(5, 10));
+              data.total.push(i.total || 0); 
             }
           }
-          if(x == -1) {
-            data.date.push(i.date.substring(5,10))
-            data.total.push(i.total)
-          }
         }
-        return data
-      }
+      
+        return data;
+      };
 
       
 
